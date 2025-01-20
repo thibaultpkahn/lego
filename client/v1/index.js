@@ -54,7 +54,7 @@ console.log("Number of deals:", numberOfDeals);
 // 1. Create a variable and assign it the list of shopping community name only
 // 2. Log the variable
 // 3. Log how many shopping communities we have
-const shoppingCommunityNames = deals.map(deal => deal.name);
+const shoppingCommunityNames = deals.map(deal => deal.community);
 console.log("Shopping communities:", shoppingCommunityNames);
 console.log("Number of shopping communities:", shoppingCommunityNames.length);
 
