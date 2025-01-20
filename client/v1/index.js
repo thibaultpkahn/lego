@@ -70,7 +70,7 @@ function sortDealsByPrice(list) {
 }
 const sortedDeals = sortDealsByPrice(deals);
 console.log("Deals sorted by price (from lowest to highest):");
-console.log("List of sorted deals by price",sortedDeals);
+console.table("List of sorted deals by price",sortedDeals);
 // 🎯 TODO 5: Sort by date
 // 1. Create a function to sort the deals by date
 // 2. Create a variable and assign it the list of deals by date from recent to old
