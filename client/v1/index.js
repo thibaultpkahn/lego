@@ -122,7 +122,6 @@ console.log("Average discount percentage:", averageDiscount + "%");
 //
 // 2. Log the variable
 // 3. Log the number of deals by community
-// 🏷️ Créer un objet pour stocker les deals par communauté
 const communities = deals.reduce((acc, deal) => {
     // Vérifie si la communauté existe déjà dans l'objet
     if (!acc[deal.community]) {
@@ -133,11 +132,7 @@ const communities = deals.reduce((acc, deal) => {
 
     return acc;
 }, {});
-
-// 🏷️ Afficher l'objet communities
 console.log("Deals grouped by community:", communities);
-
-// 🏷️ Afficher le nombre de deals par communauté
 Object.keys(communities).forEach(community => {
     console.log(`Number of deals in ${community}:`, communities[community].length);
 });
