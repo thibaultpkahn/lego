@@ -68,13 +68,20 @@ console.log("Number of shopping communities:", uniqueShoppingCommunities.length)
 function sortDealsByPrice(list) {
     return list.sort((a, b) => a.price - b.price);
 }
-const sortedDeals = sortDealsByPrice(deals);
+const sortedDealsByPrice = sortDealsByPrice(deals);
 console.log("Deals sorted by price (from lowest to highest):");
-console.table(sortedDeals);
+console.table(sortedDealsByPrice);
+
 // 🎯 TODO 5: Sort by date
 // 1. Create a function to sort the deals by date
 // 2. Create a variable and assign it the list of deals by date from recent to old
 // 3. Log the variable
+function sortDealsByDate(List) {
+    return List.sort((a, b) => new Date(b.published) - new Date(a.published));
+}
+const sortedDealsByDate = sortDealsByDate(deals);
+console.log("Deals sorted by date (from recent to old):");
+console.table(sortedDealsByDate);
 
 // 🎯 TODO 6: Filter a specific percentage discount range
 // 1. Filter the list of deals between 50% and 75%
