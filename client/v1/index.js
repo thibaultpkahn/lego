@@ -45,6 +45,8 @@ console.log("Best LEGO deal:", bestLegoDeal);
 // 🎯 TODO 2: Number of deals
 // 1. Create a variable and assign it the number of deals
 // 2. Log the variable
+const numberOfDeals = deals.length;
+console.log("Number of deals:", numberOfDeals);
 
 // 🎯 TODO 3: Website name
 // 1. Create a variable and assign it the list of shopping community name only
