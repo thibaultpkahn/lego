@@ -41,6 +41,8 @@ console.log("Best LEGO deal:", bestLegoDeal);
  * The variable is loaded by the file `data.js`
  * 🧱
  */
+console.log(deals);
+console.table(deals);
 
 // 🎯 TODO 2: Number of deals
 // 1. Create a variable and assign it the number of deals
