@@ -57,6 +57,8 @@ console.log("Number of deals:", numberOfDeals);
 const shoppingCommunityNames = deals.map(deal => deal.community);
 console.log("Shopping communities:", shoppingCommunityNames);
 console.log("Number of shopping communities:", shoppingCommunityNames.length);
+const uniqueShoppingCommunities = [...new Set(shoppingCommunityNames)];
+console.log("Number of shopping communities:", uniqueShoppingCommunities.length);
 
 // 🎯 TODO 4: Sort by price
 // 1. Create a function to sort the deals by price
