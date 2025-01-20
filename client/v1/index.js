@@ -55,9 +55,10 @@ console.log("Number of deals:", numberOfDeals);
 // 2. Log the variable
 // 3. Log how many shopping communities we have
 const shoppingCommunityNames = deals.map(deal => deal.community);
-console.log("Shopping communities:", shoppingCommunityNames);
-console.log("Number of shopping communities:", shoppingCommunityNames.length);
+//console.log("Shopping communities:", shoppingCommunityNames);
+//console.log("Number of shopping communities:", shoppingCommunityNames.length);
 const uniqueShoppingCommunities = [...new Set(shoppingCommunityNames)];
+console.log("Shopping communities:", uniqueShoppingCommunities);
 console.log("Number of shopping communities:", uniqueShoppingCommunities.length);
 
 // 🎯 TODO 4: Sort by price
