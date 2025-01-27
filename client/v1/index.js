@@ -180,14 +180,14 @@ const VINTED = [
   },
   {
     link: "https://www.vinted.fr/items/5567527057-lego-43230-cinepresa-omaggio-a-walt-disney",
-    price: "121.45",
+    price: 121.45,
     title: "Lego 43230 Cinepresa omaggio a Walt Disney",
     published: "Sat, 28 Dec 2024 09:00:02 GMT",
     uuid: "e96bfdec-45ad-5391-83f7-6e9f3cd7fecb"
   },
   {
     link: "https://www.vinted.fr/items/5471926226-lego-disney-43230",
-    price: "86.8",
+    price: 86.8,
     title: "Lego Disney 43230",
     published: "Mon, 02 Dec 2024 08:48:11 GMT",
     uuid: "624846ce-ea0c-5f35-9b93-6f4bc51c5e0c"
