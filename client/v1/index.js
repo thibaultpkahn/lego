@@ -454,7 +454,7 @@ function AveragePrice(list) {
     return totalPrice / list.length;
 }
 const AveragePriceVinted = AveragePrice(VINTED);
-console.log("Average discount percentage:", AveragePriceVinted + "%");
+console.log("Average price percentage:", AveragePriceVinted + "%");
 // 2. Compute the p5 price value of the listing
 function SortedDealsByPrice(list) {
     return list.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
@@ -463,8 +463,11 @@ const sortedVintedByPrice = SortedDealsByPrice(VINTED);
 console.log("VINTED sorted by price (from lowest to highest):");
 console.table(sortedVintedByPrice);
 
-const p5 = Math.floor((25 / 100) * sortedVintedByPrice.length);
-console.log(sortedVintedByPrice[p5].price);
+const p5 = Math.floor((5 / 100) * sortedVintedByPrice.length);
+console.log("pourcentile p5", sortedVintedByPrice[p5].price);
+
+const p25 = Math.floor((25 / 100) * sortedVintedByPrice.length);
+console.log("pourcentile p25", sortedVintedByPrice[p25].price);
 
 
 
