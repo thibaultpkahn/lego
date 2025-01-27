@@ -543,8 +543,7 @@ const deal = {
 
 // 1. Compute the potential highest profitability based on the VINTED items
 // 2. Log the value
-// 🏷️ Trouver le prix maximum du produit 43230 dans la liste VINTED
-const maxVintedPrice = Math.max(...VINTED.filter(item => item.legoId === "43230").map(item => parseFloat(item.price)));
+const maxVintedPrice = Math.max(...VINTED.map(item => parseFloat(item.price)));
 
 // 🏷️ Calcul de la rentabilité
 const profitability = ((maxVintedPrice - deal.price) / deal.price) * 100;
