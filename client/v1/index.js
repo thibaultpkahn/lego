@@ -464,7 +464,7 @@ console.log("VINTED sorted by price (from lowest to highest):");
 console.table(sortedVintedByPrice);
 
 const p5 = Math.floor((25 / 100) * sortedVintedByPrice.length);
-console.log(p5);
+console.log(sortedVintedByPrice[p5]);
 
 
 
