@@ -445,6 +445,7 @@ const VINTED = [
  * Do some Maths
  * 💶
  */
+console.table(VINTED);
 
 // 🎯 TODO 11: Compute the average, the p5 and the p25 price value
 // 1. Compute the average price value of the listing
@@ -452,7 +453,14 @@ const VINTED = [
 // 3. Compute the p25 price value of the listing
 // The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
-console.table(VINTED);
+function AveragePrice(list) {
+    const totalPrice = list.reduce((sum, list) => sum + list.price, 0);
+    return totalPrice / list.length;
+}
+const AveragePriceVinted = AveragePrice(VINTED);
+console.log("Average discount percentage:", AveragePriceVinted + "%");
+
+
 
 // 🎯 TODO 12: Very old listed items
 // // 1. Log if we have very old items (true or false)
