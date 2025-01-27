@@ -517,8 +517,8 @@ let camera = sealedCamera;
 camera.favorite = true;
 
 // 1. Log `sealedCamera` and `camera` variables
-console.log(sealedCamera);
-console.log(camera);
+console.log("sealedCamera ",sealedCamera);
+console.log("camera ",camera);
 // 2. What do you notice?
 
 // we make (again) a new assignment again
@@ -531,6 +531,12 @@ sealedCamera = {
 };
 
 // 3. Update `camera` property with `favorite` to true WITHOUT changing sealedCamera properties
+let camera = { ...sealedCamera };
+
+camera.favorite = true;
+
+console.log("sealedCamera:", sealedCamera);
+console.log("camera:", camera);
 
 
 // 🎯 TODO 11: Compute the profitability
