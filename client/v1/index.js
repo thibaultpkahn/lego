@@ -145,7 +145,6 @@ function sortedDealsByPricebyCommunity(list) {
 }
 //const sortedCommunitiesByPrice = sortDealsByPrice(communities[community]);
 
-console.log(communities)
 Object.keys(communities).forEach(community => {
     console.log(`List of deals sorted by price in ${community}:`);
     console.table(sortedDealsByPricebyCommunity(communities[community]))
@@ -154,7 +153,13 @@ Object.keys(communities).forEach(community => {
 // 🎯 TODO 10: Sort by date for each community
 // 1. For each set, sort the deals by date, from old to recent
 // 2. Log the sort
-
+function sortedDealsByDatebyCommunity(List) {
+    return List.sort((a, b) => new Date(a.published) - new Date(b.published));
+}
+Object.keys(communities).forEach(community => {
+    console.log(`List of deals sorted by date in ${community}:`);
+    console.table(sortedDealsByDatebyCommunity(communities[community]))
+});
 
 /**
  * 🧥
