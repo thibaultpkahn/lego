@@ -454,7 +454,7 @@ console.table(VINTED);
 // The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
 function AveragePrice(list) {
-    const totalPrice = list.reduce((sum, list) => sum + list.price, 0);
+    const totalPrice = list.reduce((sum, VINTED) => sum + VINTED.price, 0);
     return totalPrice / list.length;
 }
 const AveragePriceVinted = AveragePrice(VINTED);
