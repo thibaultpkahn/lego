@@ -482,13 +482,15 @@ function VeryOldItems(dealsList) {
 
     return dealsList.some(VINTED => new Date(VINTED.published) < threeWeeksAgo);
 }
-
 console.log("Has very old listed items:", VeryOldItems(VINTED));
 
 
 // 🎯 TODO 13: Find a specific item
 // 1. Find the item with the uuid `f2c5377c-84f9-571d-8712-98902dcbb913`
 // 2. Log the item
+const foundItem = VINTED.find(VINTED => VINTED.uuid === "f2c5377c-84f9-571d-8712-98902dcbb913");
+console.log("Item with UUID:", foundItem ? foundItem : "Not found");
+
 
 // 🎯 TODO 14: Delete a specific item
 // 1. Delete the item with the uuid `f2c5377c-84f9-571d-8712-98902dcbb913`
