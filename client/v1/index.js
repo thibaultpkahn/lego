@@ -531,13 +531,6 @@ sealedCamera = {
 };
 
 // 3. Update `camera` property with `favorite` to true WITHOUT changing sealedCamera properties
-let camera = { ...sealedCamera };
-
-camera.favorite = true;
-
-console.log("sealedCamera:", sealedCamera);
-console.log("camera:", camera);
-
 
 // 🎯 TODO 11: Compute the profitability
 // From a specific deal called `deal`
@@ -550,6 +543,14 @@ const deal = {
 
 // 1. Compute the potential highest profitability based on the VINTED items
 // 2. Log the value
+// 🏷️ Trouver le prix maximum du produit 43230 dans la liste VINTED
+const maxVintedPrice = Math.max(...VINTED.filter(item => item.legoId === "43230").map(item => parseFloat(item.price)));
+
+// 🏷️ Calcul de la rentabilité
+const profitability = ((maxVintedPrice - deal.price) / deal.price) * 100;
+
+console.log(`Max VINTED price for 43230: ${maxVintedPrice}€`);
+console.log(`Profitability: ${profitability.toFixed(2)}%`);
 
 
 
