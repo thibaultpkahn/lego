@@ -173,21 +173,21 @@ Object.keys(communities).forEach(community => {
 const VINTED = [
   {
     link: "https://www.vinted.fr/items/5623924966-lego-walt-disney-tribute-camera-43230",
-    price: 48.99,
+    price: "48.99",
     title: "Lego Walt Disney Tribute Camera (43230",
     published: "Thu, 09 Jan 2025 07:52:33 GMT",
     uuid: "d90a9062-259e-5499-909c-99a5eb488c86"
   },
   {
     link: "https://www.vinted.fr/items/5567527057-lego-43230-cinepresa-omaggio-a-walt-disney",
-    price: 121.45,
+    price: "121.45",
     title: "Lego 43230 Cinepresa omaggio a Walt Disney",
     published: "Sat, 28 Dec 2024 09:00:02 GMT",
     uuid: "e96bfdec-45ad-5391-83f7-6e9f3cd7fecb"
   },
   {
     link: "https://www.vinted.fr/items/5471926226-lego-disney-43230",
-    price: 86.8,
+    price: "86.8",
     title: "Lego Disney 43230",
     published: "Mon, 02 Dec 2024 08:48:11 GMT",
     uuid: "624846ce-ea0c-5f35-9b93-6f4bc51c5e0c"
@@ -454,7 +454,7 @@ console.table(VINTED);
 // The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
 function AveragePrice(list) {
-    const totalPrice = list.reduce((sum, VINTED) => sum + VINTED.price, 0);
+    const totalPrice = list.reduce((sum, VINTED) => sum + parseFloat(VINTED.price), 0);
     return totalPrice / list.length;
 }
 const AveragePriceVinted = AveragePrice(VINTED);
