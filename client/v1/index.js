@@ -173,7 +173,7 @@ Object.keys(communities).forEach(community => {
 const VINTED = [
   {
     link: "https://www.vinted.fr/items/5623924966-lego-walt-disney-tribute-camera-43230",
-    price: "48.99",
+    price: 48.99,
     title: "Lego Walt Disney Tribute Camera (43230",
     published: "Thu, 09 Jan 2025 07:52:33 GMT",
     uuid: "d90a9062-259e-5499-909c-99a5eb488c86"
