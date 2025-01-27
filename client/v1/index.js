@@ -141,14 +141,14 @@ Object.keys(communities).forEach(community => {
 // 🎯 TODO 9: Sort by price for each community
 // 1. For each community, sort the deals by discount price, from highest to lowest
 // 2. Log the sort
-//function sortDealsByPrice(list) {
-    //return list.sort((a, b) => a.price - b.price);
-//}
+function sortedDealsByPricebyCommunity(list) {
+    return list.sort((a, b) => b.price - a.price);
+}
 //const sortedCommunitiesByPrice = sortDealsByPrice(communities[community]);
 
 console.log(communities)
 Object.keys(communities).forEach(community => {
-    console.log(`List of deals sorted by price in ${community}:`, sortDealsByPrice(communities[community]));
+    console.log(`List of deals sorted by price in ${community}:`, sortedDealsByPricebyCommunity(communities[community]));
 });
 
 // 🎯 TODO 10: Sort by date for each community
