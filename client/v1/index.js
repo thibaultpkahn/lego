@@ -543,7 +543,7 @@ const deal = {
 
 // 1. Compute the potential highest profitability based on the VINTED items
 // 2. Log the value
-const maxVintedPrice = Math.max(...VINTED.map(item => parseFloat(item.price)));
+const maxVintedPrice = Math.max(VINTED.map(item => parseFloat(item.price)));
 
 // 🏷️ Calcul de la rentabilité
 const profitability = ((maxVintedPrice - deal.price) / deal.price) * 100;
