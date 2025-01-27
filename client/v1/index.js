@@ -456,6 +456,9 @@ function AveragePrice(list) {
 const AveragePriceVinted = AveragePrice(VINTED);
 console.log("Average price percentage:", AveragePriceVinted + "%");
 // 2. Compute the p5 price value of the listing
+// 3. Compute the p25 price value of the listing
+// The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
+
 function SortedDealsByPrice(list) {
     return list.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 }
@@ -470,44 +473,18 @@ const p25 = Math.floor((25 / 100) * sortedVintedByPrice.length);
 console.log("pourcentile p25", sortedVintedByPrice[p25].price);
 
 
-
-
-
-// 🏷️ Fonction pour calculer le percentile p5
-//function calculatePercentile(data, percentile) {
-    //if (data.length === 0) return null; // Vérification si la liste est vide
-
-    // Trier la liste des prix en ordre croissant
-    //const sortedData = [...data].sort((a, b) => a - b);
-
-    // Calculer l'index du percentile
-    //const index = Math.floor((percentile / 100) * sortedData.length);
-
-    // Retourner la valeur du percentile
-    //return sortedData[index];
-//}
-
-// 🏷️ Extraire les prix des deals
-//const prices = deals.map(deal => deal.price);
-
-// 🏷️ Calculer le 5ᵉ percentile (p5)
-//const p5Price = calculatePercentile(prices, 5);
-
-//console.log("5th percentile price (p5):", p5Price);
-
-
-
-
-
-
-
-
-// 3. Compute the p25 price value of the listing
-// The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
-
 // 🎯 TODO 12: Very old listed items
 // // 1. Log if we have very old items (true or false)
 // // A very old item is an item `published` more than 3 weeks ago.
+function VeryOldItems(dealsList) {
+    const threeWeeksAgo = new Date();
+    threeWeeksAgo.setDate(threeWeeksAgo.getDate() - 21); // Soustrait 21 jours (3 semaines)
+
+    return dealsList.some(VINTED => new Date(VINTED.published) < threeWeeksAgo);
+}
+
+console.log("Has very old listed items:", VeryOldItems(VINTED));
+
 
 // 🎯 TODO 13: Find a specific item
 // 1. Find the item with the uuid `f2c5377c-84f9-571d-8712-98902dcbb913`
