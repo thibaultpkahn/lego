@@ -462,6 +462,43 @@ function SortedDealsByPrice(list) {
 const sortedVintedByPrice = SortedDealsByPrice(VINTED);
 console.log("VINTED sorted by price (from lowest to highest):");
 console.table(sortedVintedByPrice);
+
+const p5 = Math.floor((5 / 100) * sortedVintedByPrice.length);
+
+
+
+
+
+
+// 🏷️ Fonction pour calculer le percentile p5
+//function calculatePercentile(data, percentile) {
+    //if (data.length === 0) return null; // Vérification si la liste est vide
+
+    // Trier la liste des prix en ordre croissant
+    //const sortedData = [...data].sort((a, b) => a - b);
+
+    // Calculer l'index du percentile
+    //const index = Math.floor((percentile / 100) * sortedData.length);
+
+    // Retourner la valeur du percentile
+    //return sortedData[index];
+}
+
+// 🏷️ Extraire les prix des deals
+//const prices = deals.map(deal => deal.price);
+
+// 🏷️ Calculer le 5ᵉ percentile (p5)
+//const p5Price = calculatePercentile(prices, 5);
+
+//console.log("5th percentile price (p5):", p5Price);
+
+
+
+
+
+
+
+
 // 3. Compute the p25 price value of the listing
 // The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
