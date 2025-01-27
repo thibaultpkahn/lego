@@ -98,9 +98,7 @@ function calculateAverageDiscount(dealsList) {
     return totalDiscount / dealsList.length;
 }
 const averageDiscount = calculateAverageDiscount(deals);
-console.log("Average discount percentage:", averageDiscount + "%oui");
-console.log("Test reprise");
-
+console.log("Average discount percentage:", averageDiscount + "%");
 /**
  * 🏎
  * We are almost done with the `deals` variable
@@ -142,6 +140,14 @@ Object.keys(communities).forEach(community => {
 // 🎯 TODO 9: Sort by price for each community
 // 1. For each community, sort the deals by discount price, from highest to lowest
 // 2. Log the sort
+//function sortDealsByPrice(list) {
+    //return list.sort((a, b) => a.price - b.price);
+//}
+//const sortedDealsByPrice = sortDealsByPrice(deals);
+//console.log("Deals sorted by price (from lowest to highest):");
+//console.table(sortedDealsByPrice);
+
+console.log(communities)
 
 // 🎯 TODO 10: Sort by date for each community
 // 1. For each set, sort the deals by date, from old to recent
