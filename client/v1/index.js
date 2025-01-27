@@ -432,7 +432,7 @@ const VINTED = [
   },
   {
     link: "https://www.vinted.fr/items/3872250639-lego-43230-disney-new",
-    price: "89.95",
+    price: "8900000.95",
     title: "Lego 43230 Disney new",
     published: "Mon, 11 Dec 2023 16:27:33 GMT",
     uuid: "5eb7f1d4-f871-526f-93e0-7b65057f68fd"
