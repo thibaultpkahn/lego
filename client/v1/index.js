@@ -432,7 +432,7 @@ const VINTED = [
   },
   {
     link: "https://www.vinted.fr/items/3872250639-lego-43230-disney-new",
-    price: "8900000.95",
+    price: "89.95",
     title: "Lego 43230 Disney new",
     published: "Mon, 11 Dec 2023 16:27:33 GMT",
     uuid: "5eb7f1d4-f871-526f-93e0-7b65057f68fd"
@@ -449,18 +449,21 @@ console.table(VINTED);
 
 // 🎯 TODO 11: Compute the average, the p5 and the p25 price value
 // 1. Compute the average price value of the listing
-// 2. Compute the p5 price value of the listing
-// 3. Compute the p25 price value of the listing
-// The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
-
 function AveragePrice(list) {
     const totalPrice = list.reduce((sum, VINTED) => sum + parseFloat(VINTED.price), 0);
     return totalPrice / list.length;
 }
 const AveragePriceVinted = AveragePrice(VINTED);
 console.log("Average discount percentage:", AveragePriceVinted + "%");
-
-
+// 2. Compute the p5 price value of the listing
+function SortedDealsByPrice(list) {
+    return list.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+}
+const sortedVintedByPrice = SortedDealsByPrice(VINTED);
+console.log("VINTED sorted by price (from lowest to highest):");
+console.table(sortedVintedByPrice);
+// 3. Compute the p25 price value of the listing
+// The p25 value (25th percentile) is the lower value expected to be exceeded in 25% of the vinted items
 
 // 🎯 TODO 12: Very old listed items
 // // 1. Log if we have very old items (true or false)
