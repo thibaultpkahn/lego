@@ -482,7 +482,7 @@ const p5 = Math.floor((5 / 100) * sortedVintedByPrice.length);
 
     // Retourner la valeur du percentile
     //return sortedData[index];
-}
+//}
 
 // 🏷️ Extraire les prix des deals
 //const prices = deals.map(deal => deal.price);
