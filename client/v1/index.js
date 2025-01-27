@@ -517,6 +517,8 @@ let camera = sealedCamera;
 camera.favorite = true;
 
 // 1. Log `sealedCamera` and `camera` variables
+console.log(sealedCamera);
+console.log(camera);
 // 2. What do you notice?
 
 // we make (again) a new assignment again
