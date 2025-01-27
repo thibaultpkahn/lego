@@ -122,11 +122,9 @@ console.log("Average discount percentage:", averageDiscount + "%");
 // 2. Log the variable
 // 3. Log the number of deals by community
 const communities = deals.reduce((acc, deal) => {
-    // Vérifie si la communauté existe déjà dans l'objet
     if (!acc[deal.community]) {
         acc[deal.community] = [];
     }
-    // Ajoute le deal dans la bonne communauté
     acc[deal.community].push(deal);
 
     return acc;
@@ -474,8 +472,8 @@ console.log("pourcentile p25", sortedVintedByPrice[p25].price);
 
 
 // 🎯 TODO 12: Very old listed items
-// // 1. Log if we have very old items (true or false)
-// // A very old item is an item `published` more than 3 weeks ago.
+// 1. Log if we have very old items (true or false)
+// A very old item is an item `published` more than 3 weeks ago.
 function VeryOldItems(dealsList) {
     const threeWeeksAgo = new Date();
     threeWeeksAgo.setDate(threeWeeksAgo.getDate() - 21); // Soustrait 21 jours (3 semaines)
@@ -544,8 +542,6 @@ const deal = {
 // 1. Compute the potential highest profitability based on the VINTED items
 // 2. Log the value
 const maxVintedPrice = Math.max(...VINTED.map(item => parseFloat(item.price)));
-
-// 🏷️ Calcul de la rentabilité
 const profitability = ((maxVintedPrice - deal.price) / deal.price) * 100;
 
 console.log(`Max VINTED price for 43230: ${maxVintedPrice}€`);
