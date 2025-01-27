@@ -133,7 +133,8 @@ const communities = deals.reduce((acc, deal) => {
 }, {});
 console.log("Deals grouped by community:", communities);
 Object.keys(communities).forEach(community => {
-    console.log(`Number of deals in ${community}:`, communities[community].length);
+    console.log(`Number of deals in ${community}:`);
+    console.table(communities[community].length);
 });
 
 
