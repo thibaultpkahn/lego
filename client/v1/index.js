@@ -99,6 +99,7 @@ function calculateAverageDiscount(dealsList) {
 }
 const averageDiscount = calculateAverageDiscount(deals);
 console.log("Average discount percentage:", averageDiscount + "%");
+console.log("Test reprise");
 
 /**
  * 🏎
