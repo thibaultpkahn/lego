@@ -2,6 +2,7 @@
 const avenuedelabrique = require('./websites/avenuedelabrique');
 const dealabs = require('./websites/dealabs');
 const vinted = require('./websites/vinted');
+const connectToDatabase = require('./database');
 
 async function main() {
   try {
@@ -40,6 +41,16 @@ async function main() {
     console.error('❌ Erreur lors du scraping :', error);
     process.exit(1);
   }
+}
+async function main() {
+    const { client, db } = await connectToDatabase();
+    if (!db) return;
+
+    const collection = db.collection('deals');
+    const deals = await collection.find().toArray(); // Récupère tous les deals
+    console.log("📊 Deals récupérés :", deals);
+
+    client.close(); // Ferme la connexion
 }
 
 main();
